@@ -1,15 +1,20 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles"
 import logo from "../images/logo.png"
-// import PropTypes from 'prop-types';
+import { Link,LinkScroll, animateScroll as scroll } from "react-scroll";
+import { Link as Nlink, NavLink} from "react-router-dom"
 import {
   AppBar,
   Toolbar,
   Typography,
   Button,
   Container,
-  useScrollTrigger
+  useScrollTrigger,
+  Grid
 } from "@material-ui/core";
+
+import "../pages/index.css"
+import NavButton from "./NavButton";
 
 function ElevationScroll(props) {
   const { children, window } = props;
@@ -35,11 +40,9 @@ const style = makeStyles(theme => ({
   title: {
     flexGrow: 1,
     marginLeft: 10
-  },
-  logo: {
-    width: 30
   }
 }));
+
 
 export default function NavBar(props) {
   const classes = style();
@@ -49,18 +52,19 @@ export default function NavBar(props) {
         <AppBar style={{transitionProperty: "color"}}>
           <Container>
             <Toolbar>
-              <img src={logo} alt="logo" className={classes.logo}/>
+              <img src={logo} alt="logo" style={{width: 30}}/>
               <Typography variant="overline" className={classes.title}>
                 Coin<strong>rizon</strong>
               </Typography>
-              <Button color="inherit">Home</Button>
-              <Button color="inherit">About Us</Button>
-              <Button color="inherit">Features</Button>
-              <Button color="inherit">Home</Button>
-              <Button color="inherit">Packages</Button>
-              <Button color="inherit">Our Projects</Button>
-              <Button color="inherit">Team</Button>
-              <Button color="primary">Contact</Button>
+              <Grid container spacing={1} alignItems="center" justify="flex-end">
+                <NavButton name="home"/>
+                <NavButton name="about"/>
+                <NavButton name="features"/>
+                <NavButton name="packages"/>
+                <NavButton name="projects"/>
+                <NavButton name="team" to="team"/>
+                <NavButton name="contact" to="contact" variant="outlined"/>
+              </Grid>
             </Toolbar>
           </Container>
         </AppBar>

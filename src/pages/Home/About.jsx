@@ -1,14 +1,19 @@
 import React, { Component } from "react";
 import { Paper, Typography, Grid, Divider } from "@material-ui/core";
 // Styles
-import "../Home.css";
+import trouble from "../../images/trouble.png"
+import worlds from "../../images/worlds.png"
+
+const Title = {
+  marginBottom: 10
+}
 
 export default class About extends Component {
   render() {
     return (
       <div>
         <Paper elevation="10" className="Paper">
-          <Typography variant="h4">ABOUT SCREEN</Typography>
+          <Typography style={Title} variant="h4">ABOUT US</Typography>
           <Typography varient="p">
             During the last 3 years of the ICO market, a concept that was very
             foreign and unique was turned into something where mainstream
@@ -26,8 +31,9 @@ export default class About extends Component {
           </Typography>
           <Divider style={{margin: "50px 0px"}}/>
           <Grid container spacing={3} justify="space-evenly" style={{textAlign: "center"}}>
-            <Grid item xs={6}>
-              <Typography variant="h4">BEST OF BOTH WORLDS</Typography>
+            <Grid item sm={6} xs={12}>
+              <img style={{height: 150}} src={worlds} alt="hands around people"/>
+              <Typography style={Title} variant="h4">BEST OF BOTH WORLDS</Typography>
               <Typography component="p">
                 The community shouldn't have to suffer during development, nor
                 should development suffer from divided attention. Developers
@@ -46,8 +52,9 @@ export default class About extends Component {
                 a day, 7 days a week.
               </Typography>
             </Grid>
-            <Grid item xs={6}>
-              <Typography variant="h4">
+            <Grid item sm={6} xs={12}>
+              <img style={{height: 150}} src={trouble} alt="hands around people"/>
+              <Typography style={Title} variant="h4">
                 CRYPTO COMMUNITY TROUBLE
               </Typography>
               <Typography component="p">

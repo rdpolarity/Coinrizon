@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';  
 
@@ -8,9 +8,10 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import NavBar from "components/NavBar"
 
 // Core Pages
-import Home from "pages/Home"
+import Index from "pages/index"
 import Team from "pages/Team"
 import Contact from "pages/Contact"
+import Footer from "components/Footer";
 
 const theme = createMuiTheme({
   palette: {
@@ -31,15 +32,16 @@ const theme = createMuiTheme({
 document.body.style = `background: ${theme.palette.primary.main}`;
 
 ReactDOM.render(
-  <Router history={createBrowserHistory()}>
+  <BrowserRouter history={createBrowserHistory()}>
     <MuiThemeProvider theme = { theme }>
-    <NavBar/>
-    <Switch>
-      <Route path="/" component={Home} exact/>
-      <Route path="/team" component={Team} />
-      <Route path="/contact" component={Contact} />
-    </Switch>
+      <NavBar/>
+      <Switch>
+        <Route path="/" component={Index} exact/>
+        <Route path="/team" component={Team} />
+        <Route path="/contact" component={Contact} />
+      </Switch>
+      <Footer/>
     </MuiThemeProvider>
-  </Router>,
+  </BrowserRouter>,
   document.getElementById("root")
 );

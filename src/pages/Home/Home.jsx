@@ -1,7 +1,5 @@
 import React from "react";
 import { Typography, Grid, Button } from "@material-ui/core";
-// Styles
-import "../Home.css";
 
 export default function Splash() {
   return (
@@ -15,8 +13,8 @@ export default function Splash() {
             connections and nurturing community growth through influencers and
             interpersonal engagement
           </Typography>
-          <Button variant="contained" color="secondary">Packages</Button>
-          <Button variant="outlined" color="secondary">Quote</Button>
+          <Button style={{margin: 10}} variant="contained" color="secondary">Packages</Button>
+          <Button variant="outlined" color="secondary">Quote</Button>  
         </Grid>
       </Grid>
     </div>

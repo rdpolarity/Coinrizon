@@ -1,0 +1,21 @@
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --secondary: #F44336;
+}
+
+.Paper {
+    padding: 50px;
+}
+
+.titlee {
+    margin-bottom: 50px;
+}
+
+.active {
+    color: var(--secondary);
+    /* border-bottom: 1px solid var(--secondary); */
+}
+
