@@ -1,5 +1,5 @@
 import React from "react";
-import { Paper, Typography, Grid, Divider } from "@material-ui/core";
+import { Paper, Typography } from "@material-ui/core";
 
 const Title = {
   marginBottom: 10
@@ -8,7 +8,7 @@ const Title = {
 export default function Projects() {
   return (
     <div>
-      <Paper elevation="10" className="Paper">
+      <Paper elevation={10} className="Paper">
         <Typography style={Title} variant="h4">
           Projects
         </Typography>

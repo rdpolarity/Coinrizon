@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Router, Route, Switch } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';  
 
@@ -12,6 +12,9 @@ import Index from "pages/index"
 import Team from "pages/Team"
 import Contact from "pages/Contact"
 import Footer from "components/Footer";
+
+// Assets
+// import Background from "./images/Background.svg"
 
 const theme = createMuiTheme({
   palette: {
@@ -29,10 +32,8 @@ const theme = createMuiTheme({
   }
 });
 
-document.body.style = `background: ${theme.palette.primary.main}`;
-
 ReactDOM.render(
-  <BrowserRouter history={createBrowserHistory()}>
+  <Router history={createBrowserHistory()}>
     <MuiThemeProvider theme = { theme }>
       <NavBar/>
       <Switch>
@@ -42,6 +43,6 @@ ReactDOM.render(
       </Switch>
       <Footer/>
     </MuiThemeProvider>
-  </BrowserRouter>,
+  </Router>,
   document.getElementById("root")
 );

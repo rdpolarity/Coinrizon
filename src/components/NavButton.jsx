@@ -1,34 +1,33 @@
-
-import { Link, LinkScroll, animateScroll as scroll } from "react-scroll";
+import React, { Component } from "react";
+import { Link } from "react-scroll";
 import { Link as Nlink, NavLink } from "react-router-dom";
 import {
-  AppBar,
-  Toolbar,
-  Typography,
   Button,
-  Container,
-  useScrollTrigger,
-  Grid
+  Grid,
 } from "@material-ui/core";
+// import { useTheme } from '@material-ui/styles';
 
-import React, { Component } from "react";
 
-export default class NavButton extends Component {
-  render() {
+
+export default function NavButton(props) {
     return (
         <Grid item>
-          <Nlink to={this.props.to} style={{ textDecoration: "none" }}>
+          
             <Link
               offset={-70}
               spy={true}
               activeClass="active"
-              className={this.props.name}
-              to={this.props.name}
+              className={props.name}
+              to={props.name}
             >
-              <Button variant={this.props.variant} color="inherit">{this.props.name}</Button>
+                <Nlink to={props.to} style={{textDecoration: "none", color: "inherit"}}>
+                    <Button variant={props.variant} color="inherit">{props.name}</Button>
+                </Nlink>    
             </Link>
-          </Nlink>
         </Grid>
     );
-  }
+}
+
+NavButton.defaultProps = {
+    to: "/"
 }

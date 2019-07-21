@@ -1,0 +1,13 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Background" clip-path="url(#clip0)">
+<rect width="1280" height="720" fill="white"/>
+<path id="Rectangle" d="M0 -21H1280V165.736L0 212V-21Z" fill="#2196F3"/>
+<path id="Rectangle_2" d="M0 529.5L1280 446.5V394L0 190V529.5Z" fill="#F44336"/>
+<path id="Rectangle_3" d="M1280 755L0 755L1.1365e-05 625L1280 444L1280 755Z" fill="#2196F3"/>
+</g>
+<defs>
+<clipPath id="clip0">
+<rect width="1280" height="720" fill="white"/>
+</clipPath>
+</defs>
+</svg>

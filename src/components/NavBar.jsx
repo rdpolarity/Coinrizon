@@ -1,13 +1,10 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles"
 import logo from "../images/logo.png"
-import { Link,LinkScroll, animateScroll as scroll } from "react-scroll";
-import { Link as Nlink, NavLink} from "react-router-dom"
 import {
   AppBar,
   Toolbar,
   Typography,
-  Button,
   Container,
   useScrollTrigger,
   Grid
@@ -26,7 +23,7 @@ function ElevationScroll(props) {
 
   return React.cloneElement(children, {
     elevation: trigger ? 5 : 0,
-    color: trigger ? "white" : "primary"
+    color: trigger ? "default" : "primary"
   });
 }
 
@@ -49,7 +46,7 @@ export default function NavBar(props) {
   return (
     <div>
       <ElevationScroll>
-        <AppBar style={{transitionProperty: "color"}}>
+        <AppBar style={{transitionProperty: "all"}}>
           <Container>
             <Toolbar>
               <img src={logo} alt="logo" style={{width: 30}}/>

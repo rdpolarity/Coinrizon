@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import {Container, Grid} from "@material-ui/core"
-import { Link, animateScroll as scroll } from "react-scroll";
 import Splash from "./Home/Home"
 import About from "./Home/About"
 import Features from './Home/Features';

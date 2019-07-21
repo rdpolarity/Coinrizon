@@ -6,7 +6,7 @@ export default class Footer extends Component {
         return (
             <div>
                 <Container>
-                    <Grid style={{height: 200}} container alignItems="center">
+                    <Grid style={{height: 150}} container alignItems="center">
                         <Grid item>
                             <Typography style={{color: "white"}}>Copyrights 2019 © All Rights Reserved COINRIZON</Typography>
                         </Grid>
